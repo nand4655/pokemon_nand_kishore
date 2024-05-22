@@ -7,18 +7,6 @@
 
 import SwiftUI
 
-
-struct ErrorMessage {
-    static let genericError = "Something went wrong!"
-    static let invalidUrl = "Invalid Url"
-}
-
-struct Constant {
-    static let pokemonBaseApi = "https://pokeapi.co/api/v2/pokemon"
-}
-
-
-// PokemonListViewModel.swift
 class PokemonListViewModel: ObservableObject {
     @Published private(set) var pokemonList = [Pokemon]()
     @Published var sortOrder = SortOrder.id

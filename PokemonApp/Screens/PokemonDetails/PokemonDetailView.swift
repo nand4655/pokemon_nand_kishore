@@ -33,22 +33,27 @@ struct PokemonDetailView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top, 20)
+                
                 Text("ID: \(pokemonDetail.id)")
                     .font(.title2)
                     .padding(.top, 4)
+                
                 Text("Base Experience: \(pokemonDetail.base_experience ?? 0)")
                     .font(.title2)
                     .padding(.top, 4)
+                
                 Text("Abilities")
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.top, 12)
+                
                 ForEach(pokemonDetail.abilities ?? [], id: \.ability.name) { ability in
                     Text(ability.ability.name)
                         .font(.title2)
                         .padding(.top, 4)
                 }
-                Spacer().background(Color.red)
+                
+                Spacer()
             }
         }
         .task {
